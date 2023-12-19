@@ -1,0 +1,35 @@
+{
+    "Near regions - overworld": {
+        "dimension": "overworld",
+        "xmin": -15000,
+        "xmax": 12000,
+        "zmin": -14000,
+        "zmax": 15000,
+        "zoom": 3,
+        "files": [
+            "2023-12-19"
+        ]
+    },
+    "Near regions - the_nether": {
+        "dimension": "the_nether",
+        "xmin": -8192,
+        "xmax": 8192,
+        "zmin": -8192,
+        "zmax": 8192,
+        "zoom": 3,
+        "files": [
+            "2023-12-19"
+        ]
+    },
+    "Near regions - the_end": {
+        "dimension": "the_end",
+        "xmin": -8192,
+        "xmax": 8192,
+        "zmin": -8192,
+        "zmax": 8192,
+        "zoom": 3,
+        "files": [
+            "2023-12-19"
+        ]
+    }
+}
