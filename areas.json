@@ -1,0 +1,53 @@
+{
+  "Full - overworld": {
+    "dimension": "overworld",
+    "xmin": -41984,
+    "xmax": 41984,
+    "zmin": -41984,
+    "zmax": 41984,
+    "zoom": 0,
+    "webHidden": true
+  },
+  "Full - the_nether": {
+    "dimension": "the_nether",
+    "xmin": -22528,
+    "xmax": 22528,
+    "zmin": -22528,
+    "zmax": 22528,
+    "zoom": 0,
+    "webHidden": true
+  },
+  "Full - the_end": {
+    "dimension": "the_end",
+    "xmin": -15360,
+    "xmax": 15360,
+    "zmin": -15360,
+    "zmax": 15360,
+    "zoom": 0,
+    "webHidden": true
+  },
+  "Near regions - overworld": {
+    "dimension": "overworld",
+    "xmin": -15000,
+    "xmax": 12000,
+    "zmin": -14000,
+    "zmax": 15000,
+    "zoom": 3
+  },
+  "Near regions - the_nether": {
+    "dimension": "the_nether",
+    "xmin": -8192,
+    "xmax": 8192,
+    "zmin": -8192,
+    "zmax": 8192,
+    "zoom": 3
+  },
+  "Near regions - the_end": {
+    "dimension": "the_end",
+    "xmin": -8192,
+    "xmax": 8192,
+    "zmin": -8192,
+    "zmax": 8192,
+    "zoom": 3
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <style>
+      body {
+        margin: 0;
+      }
+      #map {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .leaflet-tile {
+        image-rendering: pixelated;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      const minZoom = 0;
+      const maxZoom = 8;
+      const toLatLng = (x, y) =>
+        L.CRS.Simple.pointToLatLng(new L.Point(x, y), 2);
+
+      const bounds = [toLatLng(-10000, -10000), toLatLng(10000, 10000)];
+
+      var map = L.map("map", {
+        crs: L.CRS.Simple,
+        maxBounds: bounds,
+        minZoom,
+        maxZoom,
+        zoomSnap: 0,
+      }).setView([0, 0], 0);
+
+      L.tileLayer(
+        "http://0.0.0.0:8000/2023-12-19/Near regions - overworld/{x}/{y}.png",
+        {
+          attribution: "(c) Prosperity players. Rendered by Squaremap",
+          tileSize: 512,
+          noWrap: true,
+          bounds: bounds,
+          maxNativeZoom: 3,
+          minNativeZoom: 3,
+        }
+      ).addTo(map);
+      setInterval(() => {
+        console.log(JSON.stringify(map.getZoom()));
+      }, 1000);
+    </script>
+  </body>
+</html>
