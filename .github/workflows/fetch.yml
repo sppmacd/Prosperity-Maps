@@ -20,18 +20,20 @@ jobs:
           pip install -r requirements.txt
       - name: Fetch maps
         run: |
+          git checkout maps
+          git pull
+          git config --global user.email "prosperity-map-fetcher@example.com"
+          git config --global user.name "Prosperity Map Fetcher"
+          git rebase main -X ours
           python fetch.py
       - name: Switch to maps branch
         run: |
           git add .
           git status
-          git stash
-          git checkout maps
-          git pull
-          git stash pop
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update maps"
           branch: maps
           create_branch: true
+          push_options: '--force'
